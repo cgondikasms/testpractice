@@ -4,12 +4,27 @@
     "name": "Catalina",
     "lastname": "GdK",
     "country": "Argentina",
-    "message": "Hola, como andas?"
+    "message": "Hola, como andas?",
+    "role": "general administrator",
+    "company": "Tech8080"
   },
+  
   {
     "email": "ineslopez@gmail.com",
     "name": "Ines",
     "lastname": "Lopez",
-    "country": "Argentina"
+    "country": "Argentina",
+    "message": "Hola, hoy es jueves",
+    "role": "country administrator",
+    "company": "MS"
+  },
+  {
+    "email": "Kt58roman@gmail.com",
+    "name": "Freddy",
+    "lastname": "Temple",
+    "country": "Argentina",
+    "message": "Hoy es un dia de junio",
+    "role": "employee manager",
+    "company": "LinkedIn"
   }
 ]

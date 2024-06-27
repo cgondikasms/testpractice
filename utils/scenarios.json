@@ -1,0 +1,23 @@
+[
+  {
+    "selector": "#idExample",
+    "url": "https://ultimateqa.com/button-success",
+    "expectedHeading": "Button success",
+    "message": "1- Se ha llegado a la primera página"
+  },
+  {
+    "selector": ".buttonClass",
+    "url": "https://ultimateqa.com/button-success?",
+    "message": "2- Se ha llegado a la segunda página"
+  },
+  {
+    "selector": "button[name='button1']",
+    "url": "https://ultimateqa.com/button-success/?button1=",
+    "message": "3- Se ha llegado a la tercera página"
+  },
+  {
+    "selector": "a:has-text('Click me using this link text!')",
+    "url": "https://ultimateqa.com/link-success/",
+    "message": "4- Se ha llegado a la cuarta página"
+  }
+]
