@@ -179,26 +179,26 @@ test("ULTIMATE QA - Automated Elements Extended Version", async ({ page }) => {
   let logCount = 0; // Variable para contar los console.log exitosos
 
   await page.goto("https://ultimateqa.com/simple-html-elements-for-automation/");
-  await page.locator("#idExample").click(); // Click usando ID
+  await page.locator("#idExample").click(); // usando ID
   await expect(page).toHaveURL("https://ultimateqa.com/button-success");
   await expect(page.getByRole('heading', { name: 'Button success' })).toBeVisible();
   console.log("1- Se ha llegado a la primera página");
   logCount++;
 
   await page.goBack();
-  await page.locator(".buttonClass").click(); // Click usando Class Name
+  await page.locator(".buttonClass").click(); // usando Class Name
   await expect(page).toHaveURL("https://ultimateqa.com/button-success?");
   console.log("2- Se ha llegado a la segunda página");
   logCount++;
 
   await page.goBack();
-  await page.locator('button[name="button1"]').click(); // Click usando Name
+  await page.locator('button[name="button1"]').click(); // usando Name
   await expect(page).toHaveURL("https://ultimateqa.com/button-success/?button1=");
   console.log("3- Se ha llegado a la tercera página");
   logCount++;
 
   await page.goBack();
-  await page.locator('a:has-text("Click me using this link text!")').click(); // Click usando link text
+  await page.locator('a:has-text("Click me using this link text!")').click(); // usando link text
   await expect(page).toHaveURL("https://ultimateqa.com/link-success/");
   console.log("4- Se ha llegado a la cuarta página");
   logCount++;

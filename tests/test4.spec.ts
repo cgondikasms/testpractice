@@ -1,7 +1,7 @@
 import { test, expect, Locator, Page } from "@playwright/test";
 const scenarios = require('../utils/scenarios.json');
 
-test.only("ULTIMATE QA - Automated Elements", async ({ page }) => {
+test("ULTIMATE QA - Automated Elements", async ({ page }) => {
   let allPassed = true;
 
   for (const scenario of scenarios) {

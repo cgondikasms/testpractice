@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-    test("herokuapp - Add/Remove Elements ", async ({ page }) => {
+    test.only("herokuapp - Add/Remove Elements ", async ({ page }) => {
       await page.goto("https://the-internet.herokuapp.com/");
       await page.getByRole("link", { name: "Add/Remove Elements" }).click();
       let add1 = await page.getByRole("button", { name: "Add Element" });
@@ -11,5 +11,15 @@ import { test, expect } from "@playwright/test";
       for (let i = 0; i < 3; i++) {
         await delete1.click();
       }
+      await page.pause();
+    });
+
+
+    test("herokuapp - Checkboxes ", async ({ page }) => {
+      await page.goto("https://the-internet.herokuapp.com/");
+      await page.getByRole("link", { name: "Checkboxes" }).click();
+      await page.locator("[type=checkbox]").first().click();
+      await page.locator("[type=checkbox]").first().nth(1).click();
+
       await page.pause();
     });
