@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-    test.only("herokuapp - Add/Remove Elements ", async ({ page }) => {
+    test("herokuapp - Add/Remove Elements ", async ({ page }) => {
       await page.goto("https://the-internet.herokuapp.com/");
       await page.getByRole("link", { name: "Add/Remove Elements" }).click();
       let add1 = await page.getByRole("button", { name: "Add Element" });
