@@ -8,8 +8,9 @@ export class CartPage {
   finalizarcompraButton: Locator;
   cart: Locator;
   cart2: Locator;
-  vaciar: Locator;
-  confirmar: Locator;
+  //vaciar: Locator;
+  vaciar1: Locator;
+  //confirmar: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -18,8 +19,9 @@ export class CartPage {
     this.finalizarcompraButton = page.getByTestId('open-delivery')
     this.cart = page.getByTestId('basket-badge')
     this.cart2 = page.getByTestId('open-cart')
-    this.vaciar = page.getByRole('button', { name: 'Vaciar bolsa' });
-    this.confirmar = page.getByRole('button', { name: 'Si' })
+    //this.vaciar = page.getByRole('button', { name: 'Vaciar bolsa' });
+    //this.confirmar = page.getByRole('button', { name: 'Si' })
+    this.vaciar1 = page.locator('.MuiIconButton-label')
   }
   async verifyproduct() {
     if (this.cartProduct) {
@@ -45,6 +47,5 @@ export class CartPage {
   async clearCart() {
   await this.cart.click();
   await this.cart2.click();
-  await this.vaciar.click();
-  await this.confirmar.click();
+  await this.vaciar1.nth(2).click();
 }}

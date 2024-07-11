@@ -27,7 +27,6 @@ test("Natura test", async ({}) => {
 
   await ordersReviewPage.fillingData();
 
-  await page.pause();
 });
 test.afterAll("Clear Data", async ({ }) => {
   const loginPage = new LoginPage(page);
@@ -37,5 +36,5 @@ test.afterAll("Clear Data", async ({ }) => {
   await loginPage.goTo(naturaURL);
   await cartPage.clearCart();
   console.log("Done");
-  await page.pause();
+
 });
